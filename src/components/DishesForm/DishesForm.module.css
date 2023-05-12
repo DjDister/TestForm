@@ -1,0 +1,52 @@
+.formContainer{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:25px;
+}
+
+.formContainer * {
+    width: calc(100% - 16px);
+    height: 38px;
+}
+.container{
+    display:"flex";
+    flex-direction:"column";
+    justify-content:"center";
+    align-items:"center";
+    padding: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    border-radius: 2px;
+}
+
+.labelCont{
+    all: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+    height: 100%;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+.input{
+    all:unset;
+    position:absolute;
+    bottom: 2px;
+    width: calc(100% - 16px);
+    height: 100%;
+}
+
+.invalidInputMessage{
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 0;
+    color: red;
+    font-size: 0.8rem;
+   
+}
