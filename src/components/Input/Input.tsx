@@ -46,7 +46,6 @@ export default function Input({
     <div
       className={`${styles.container} ${className}`}
       style={{
-        position: "relative",
         border: border,
         boxShadow: isFocused ? "0 0px 8px 2px lightblue" : "none",
         ...customStyles,
@@ -54,9 +53,6 @@ export default function Input({
     >
       <label
         style={{
-          height: "100%",
-          fontSize: "1.2rem",
-          lineHeight: "2rem",
           ...(isInteracted ? resizeLabel : {}),
         }}
         className={styles.labelCont}
@@ -66,10 +62,7 @@ export default function Input({
       </label>
       <Field
         style={{
-          position: "absolute",
           height: isInteracted ? "50%" : "100%",
-          bottom: "2px",
-          width: "calc(100% - 16px)",
           color:
             (type === "time" || "date") && !isInteracted
               ? "transparent"
@@ -86,17 +79,7 @@ export default function Input({
         step={step}
       />
       {invalidInputMessage && inputStatus === "invalid" && (
-        <div
-          style={{
-            position: "absolute",
-            top: "100%",
-            left: "0",
-            color: "red",
-            fontSize: "0.8rem",
-          }}
-        >
-          {invalidInputMessage}
-        </div>
+        <div className={styles.invalidInputMessage}>{invalidInputMessage}</div>
       )}
     </div>
   );

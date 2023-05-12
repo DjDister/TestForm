@@ -3,7 +3,6 @@
     flex-direction:"column";
     justify-content:"center";
     align-items:"center";
-    border: 1px solid grey;
     padding: 8px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -17,11 +16,24 @@
     flex-direction: column;
     justify-content: center;
     text-align: start;
-  
-    /* background-color: aliceblue; */
+    height: 100%;
+    font-size: 1.2rem;
+    line-height: 2rem;
 }
 
 .input{
     all:unset;
-    /* background-color: antiquewhite; */
+    position:absolute;
+    bottom: 2px;
+    width: calc(100% - 16px);
+    height: 100%;
+}
+
+.invalidInputMessage{
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 0;
+    color: red;
+    font-size: 0.8rem;
+   
 }
