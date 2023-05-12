@@ -1,0 +1,27 @@
+.container{
+    display:"flex";
+    flex-direction:"column";
+    justify-content:"center";
+    align-items:"center";
+    border: 1px solid grey;
+    padding: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    border-radius: 2px;
+}
+
+.labelCont{
+    all: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+  
+    /* background-color: aliceblue; */
+}
+
+.input{
+    all:unset;
+    /* background-color: antiquewhite; */
+}
