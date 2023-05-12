@@ -36,9 +36,6 @@ export default function Input({
     ? "1px solid red"
     : "1px solid grey";
 
-  console.log(value);
-  console.log(isInteracted);
-
   const resizeLabel = {
     height: "50%",
     fontSize: "0.8rem",
