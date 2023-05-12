@@ -85,6 +85,19 @@ export default function Input({
         name={inputName}
         step={step}
       />
+      {invalidInputMessage && inputStatus === "invalid" && (
+        <div
+          style={{
+            position: "absolute",
+            top: "100%",
+            left: "0",
+            color: "red",
+            fontSize: "0.8rem",
+          }}
+        >
+          {invalidInputMessage}
+        </div>
+      )}
     </div>
   );
 }
