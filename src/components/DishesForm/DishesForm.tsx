@@ -14,6 +14,7 @@ interface DishFormProps {
     spiciness_scale: string;
     slices_of_bread: string;
   };
+  errors?: string;
 }
 
 export interface DishFormData {
@@ -155,7 +156,14 @@ const DishForm: FC<Props> = (props) => {
           />
         </>
       )}
-      <button type="submit">Submit</button>
+      {props.errors && (
+        <div>
+          We found some errors: Try again with correct data after some time
+        </div>
+      )}
+      <button className={styles.submitBttn} type="submit">
+        Submit
+      </button>
     </form>
   );
 };
